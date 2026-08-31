@@ -1,0 +1,8 @@
+Scratch compile (bad composite declaration: zero components) reported by
+Semantic.Generator during dotnet build:
+
+  /tmp/vo149/composite/BadComposite.cs(5,1): warning VO004: Composite
+  declaration 'Broken' is invalid: must declare at least one component
+
+The generator reports the diagnostic and suppresses emission for the
+declaration; nothing is generated for Broken.

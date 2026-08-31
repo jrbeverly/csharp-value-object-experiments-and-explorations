@@ -1,0 +1,15 @@
+Scratch compile (invalid lifecycle usage) referencing the Sample assembly,
+whose FileHandle states are emitted by Semantic.Generator:
+
+  using Sample;
+  FileHandleMetadata metadata = new();
+  FileHandleClosed closed = metadata.Close();
+
+  /tmp/vo149/lifecycle/Program.cs(4,36): error CS1061: 'FileHandleMetadata'
+  does not contain a definition for 'Close' and no accessible extension
+  method 'Close' accepting a first argument of type 'FileHandleMetadata'
+  could be found (are you missing a using directive or an assembly
+  reference?)
+
+The build fails: FileHandleMetadata exposes only Open(), so an invalid
+transition is unrepresentable — a plain C# compile error, no analyzer.

@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Semantic.Abstractions/Semantic.Abstractions.csproj" />
+    <Project Path="src/Semantic.Generator/Semantic.Generator.csproj" />
+    <Project Path="src/Semantic.Runtime/Semantic.Runtime.csproj" />
+    <Project Path="src/Sample/Sample.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Sample.Tests/Sample.Tests.csproj" />
+  </Folder>
+</Solution>

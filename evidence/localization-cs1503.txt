@@ -1,0 +1,13 @@
+Scratch compile (invalid localization usage) referencing the Sample
+assembly, whose GreetingMessage.Render is emitted by Semantic.Generator:
+
+  using Sample;
+  string message = GreetingMessage.Render(name: 42, score: 9.5m);
+
+  /tmp/vo149/localization/Program.cs(3,47): error CS1503: Argument 1:
+  cannot convert from 'int' to 'string'
+
+The build fails: the generated Render declares (string name, decimal
+score), so a wrong parameter type is a plain C# compile error. Passing
+too few arguments fails the same way (CS7036), referenced in
+LocalizationTests.

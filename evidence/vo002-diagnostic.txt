@@ -1,0 +1,9 @@
+Scratch compile (bad constrained scalar declaration: underlying type 'double')
+reported by Semantic.Generator during dotnet build:
+
+  /tmp/vo149/scalar/BadScalar.cs(5,1): warning VO002: Constrained scalar
+  'BadAmount' declares the unsupported underlying type 'double'; only 'int'
+  is supported
+
+The generator reports the diagnostic and suppresses emission for the
+declaration; nothing is generated for BadAmount.
